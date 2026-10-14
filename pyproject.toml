@@ -1,0 +1,18 @@
+[project]
+name = "zipvet"
+version = "0.1.0"
+description = "Revisión estática de repositorios Python en ZIP para prepararlos antes de publicarlos."
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
